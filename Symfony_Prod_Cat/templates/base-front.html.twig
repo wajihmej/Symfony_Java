@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+
+<!-- Mirrored from abctechweb.net/envato/templates/thegym/colortheme/amaranth/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 00:46:53 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>The Gym | {% block title %} {% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('Front/img/logo.png') }}">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/normalize.css') }}">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/main.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/bootstrap.min.css') }}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/animsition.css') }}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/animate.css') }}">
+    <!-- Font-awesome CSS-->
+    <link rel="stylesheet" href="{{ asset('Front/css/font-awesome.min.css') }}">
+    <!-- Flaticon CSS-->
+    <link rel="stylesheet" href="{{ asset('Front/css/font/flaticon.css') }}">
+    <!-- Owl Caousel CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/vendor/OwlCarousel/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Front/vendor/OwlCarousel/owl.theme.default.min.css') }}">
+    <!-- Slick Caousel CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/vendor/slick/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('Front/vendor/slick/slick-theme.css') }}">
+    <!-- Main Menu CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/meanmenu.min.css') }}">
+    <!-- nivo slider CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/vendor/slider/css/nivo-slider.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('Front/vendor/slider/css/preview.css') }}" type="text/css" media="screen" />
+    <!-- Datetime Picker Style CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/jquery.datetimepicker.css') }}">
+    <!-- Magic popup CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/magnific-popup.css') }}">
+    <!-- stellar CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/css/jquery.stellar.css') }}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('Front/style.css') }}">
+    <!-- ionicons CSS -->
+    <link href="{{ asset('Front/css/ionicons.min.css') }}" rel="stylesheet" media="screen">
+    <!-- Modernizr Js -->
+    <script src="{{ asset('Front/js/modernizr-2.8.3.min.js') }}"></script>
+    <!-- Switcher Only -->
+    <link rel="stylesheet" id="switcher-css" type="text/css" href="{{ asset('Front/switcher/css/switcher.css') }}" media="all">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+</head>
+
+<body class="body-fullpage">
+<div class="animsition">
+    <div class="click-capture"></div>
+    <div id="wrapper" class="wrapper wrp-top boxed-full">
+        <!-- Header Area Start Here -->
+        <!-- Header Area Start Here -->
+        <div class="menu">
+            <span class="close-menu ion-close-round right-boxed"></span>
+            <div class="menu-lang right-boxed">
+                <a href="#" class="active">Eng</a>
+                <a href="#">Fra</a>
+                <a href="#">Ger</a>
+            </div>
+            <ul class="menu-list right-boxed">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/produits">Nos produits</a></li>
+            </ul>
+            <div class="menu-footer right-boxed">
+                <div class="social-list">
+                    <a href="#" class="icon ion-social-twitter"></a>
+                    <a href="#" class="icon ion-social-facebook"></a>
+                    <a href="#" class="icon ion-social-googleplus"></a>
+                    <a href="#" class="icon ion-social-linkedin"></a>
+                    <a href="#" class="icon ion-social-dribbble-outline"></a>
+                </div>
+                <div class="copy">© The Gym 2017.
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <header class="navbar boxed-full nav-pills nav-stacked">
+            <div class="navbar-bg"></div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">
+                <img class="img-responsive" width="45%" src="{{ asset('Front/img/logo.png') }}" alt="logo">
+            </a>
+            <address class="navbar-address visible-lg"><i class="icon ion-ipad"></i> (+080) 9684 32 45 789</address>
+            <div class="header-top-icon-box">
+                <h1><i class="icon ion-speedometer"></i> Opening Times: <span> 8.00 AM - 12.00 PM</span></h1>
+            </div>
+            <ul class="header-cart-area visible-lg">
+                <li>
+                    <div class="cart-area">
+                        <a href="#"><i class="icon ion-ios-cart-outline"></i> <span>2</span></a>
+                        <ul>
+                            <li>
+                                <div class="cart-single-product">
+                                    <div class="media">
+                                        <div class="pull-left cart-product-img">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product" src="{{ asset('Front/img/product/5.jpg') }}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body cart-content">
+                                            <ul>
+                                                <li>
+                                                    <div class="p-title"><a href="#">Product Title Here</a></div>
+                                                    <div><span>Code:</span> STPT600</div>
+                                                </li>
+                                                <li>
+                                                    <p>X 1</p>
+                                                </li>
+                                                <li>
+                                                    <p>$49</p>
+                                                </li>
+                                                <li>
+                                                    <a class="trash" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cart-single-product">
+                                    <div class="media">
+                                        <div class="pull-left cart-product-img">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product" src="{{ asset('Front/img/product/6.jpg') }}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body cart-content">
+                                            <ul>
+                                                <li>
+                                                    <div class="p-title"><a href="#">Product Title Here</a></div>
+                                                    <div><span>Code:</span> STPT600</div>
+                                                </li>
+                                                <li>
+                                                    <p>X 1</p>
+                                                </li>
+                                                <li>
+                                                    <p>$75</p>
+                                                </li>
+                                                <li>
+                                                    <a class="trash" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="cart-single-product">
+                                    <div class="media">
+                                        <div class="pull-left cart-product-img">
+                                            <a href="#">
+                                                <img class="img-responsive" alt="product" src="{{ asset('Front/img/product/7.jpg') }}">
+                                            </a>
+                                        </div>
+                                        <div class="media-body cart-content">
+                                            <ul>
+                                                <li>
+                                                    <div class="p-title"><a href="#">Product Title Here</a></div>
+                                                    <div><span>Code:</span> STPT600</div>
+                                                </li>
+                                                <li>
+                                                    <p>X 1</p>
+                                                </li>
+                                                <li>
+                                                    <p>$75</p>
+                                                </li>
+                                                <li>
+                                                    <a class="trash" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <ul class="checkout">
+                                    <li><a href="https://abctechweb.net/?password-protected=login&amp;redirect_to=https%3A%2F%2Fabctechweb.net%2Fenvato%2Ftemplates%2Fthegym%2Fcolortheme%2Famaranth%2Fcart.html" class="btn-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i>View Cart</a></li>
+                                    <li><a href="https://abctechweb.net/?password-protected=login&amp;redirect_to=https%3A%2F%2Fabctechweb.net%2Fenvato%2Ftemplates%2Fthegym%2Fcolortheme%2Famaranth%2Fcheck-out.html" class="btn-checkout"><i class="fa fa-share" aria-hidden="true"></i>Checkout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="header-box-top txt-light visible-lg">
+                <div class="menu-lang">
+                    <a href="#" class="active">Eng</a>
+                    <a href="#">Fra</a>
+                    <a href="#">Ger</a>
+                </div>
+            </div>
+        </header>
+        <!-- About 2 Area End Here -->
+        <!-- Popular Classes 3 Area Start Here -->
+        <div class="section-space-all body-bg full-classes">
+        {% block body %}
+
+        {% endblock %}
+        </div>
+        <!-- Popular Classes 3 Area End Here -->
+
+        <!--  <div class="map360"> -->
+        <!--  </div> -->
+        <!-- Footer Area Start Here -->
+        <footer>
+            <div class="footer-area-top accent-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box">
+                                <h3 class="title-bar-footer">contact</h3>
+                                <ul class="corporate-address">
+                                    <li>
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <p>Phone: +6789-875-2235</p>
+                                        <p>Fax: +2390-875-2235</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <p>support@tectas.com</p>
+                                        <p>thegym@domain.com</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <p>202 New Hampshire Avenue</p>
+                                        <p>North #100, New York-2573</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box">
+                                <h3 class="title-bar-footer">useful link</h3>
+                                <ul class="useful-links">
+                                    <li>
+                                        <ul>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Calsses Timetable</a></li>
+                                            <li><a href="#">Popular Classes</a></li>
+                                            <li><a href="#">Shop Product</a></li>
+                                            <li><a href="#">Trainers</a></li>
+                                            <li><a href="#">Recent News</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box">
+                                <h3 class="title-bar-footer">RECENT POSTS</h3>
+                                <div class="footer-popular-post">
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <img alt="Popular" src="{{ asset('Front/img/footer/8.jpg') }}" class="img-responsive">
+                                        </a>
+                                        <div class="media-body">
+                                            <a href="#">Pellentesque velit mauris, cursus id eros.</a>
+                                            <p>Dec 23, 2016</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <a href="#" class="pull-left">
+                                            <img alt="Popular" src="{{ asset('Front/img/footer/7.jpg') }}" class="img-responsive">
+                                        </a>
+                                        <div class="media-body">
+                                            <a href="#">Pellentesque velit mauris, cursus id eros.</a>
+                                            <p>Dec 23, 2016</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box">
+                                <h3 class="title-bar-footer">flickr gallery</h3>
+                                <ul class="flickr-photos">
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/1.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/2.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/3.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/4.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/5.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img class="img-responsive" src="{{ asset('Front/img/footer/6.jpg') }}" alt="flickr"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-area-bottom accent-bg-light">
+                <div class="container">
+                    <p>@2017 The Gym. All rights reserved. Designed by <a href="#">abctechweb</a></p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer Area End Here -->
+    </div>
+</div>
+<!-- Main Body Area End Here -->
+<div class="demo_changer">
+    <div class="demo-icon">
+        <i class="fa fa-cog fa-spin fa-2x"></i>
+    </div>
+    <div class="form_holder">
+        <h3 class="text-center switcher-title">Color Theme</h3>
+        <div class="color-changer-light">
+            <div class="box-fw-layout  color-theme">
+                <ul class="color-inline">
+                    <li><a title="Amaranth" target="_blank" class="color1 amaranth" href="index.html">Amaranth</a></li>
+                    <li><a title="Mariner" target="_blank" class="color2 mariner" href="https://abctechweb.net/envato/templates/thegym/colortheme/riogrande/index.html">Mariner</a></li>
+                    <li><a title="Rio Grande" target="_blank" class="color3 riogrande" href="https://abctechweb.net/envato/templates/thegym/colortheme/buttercup//index-full.html">Rio Grande</a></li>
+                    <li><a title="Cornflower Blue" target="_blank" class="color4 cornflowerblue" href="https://abctechweb.net/envato/templates/thegym/colortheme/cornflowerblue/index-full-non-p.html">Cornflower Blue</a></li>
+                    <li><a title="Buttercup" target="_blank" class="color5 buttercup" href="https://abctechweb.net/envato/templates/thegym/colortheme/mariner/index.html">Buttercup</a></li>
+                    <li><a target="_blank" class="color6" href="https://abctechweb.net/envato/templates/thegym/colortheme/codgray/index.html"> Cod Gray</a></li>
+                </ul>
+            </div>
+            <div class="box-fw-layout">
+                <ul>
+                    <li><a href="https://abctechweb.net/envato/templates/thegym/rtl/index.html" target="_blank" class="btn switcher-btn">RTL</a></li>
+                    <li><a href="index-onepage.html" target="_blank" class="btn switcher-btn">One Page</a></li>
+                    <li><a href="index-pagepiling.html" target="_blank" class="btn switcher-btn">index pagepiling</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!-- jquery-->
+<script src="{{ asset('Front/js/jquery-2.2.4.min.js') }}" type="text/javascript"></script>
+<!-- Bootstrap js -->
+<script src="{{ asset('Front/js/bootstrap.min.js') }}" type="text/javascript"></script>
+<!-- Custom Js -->
+<script src="{{ asset('Front/js/animsition.min.js') }}"></script>
+<!-- stellar JS -->
+<script src="{{ asset('Front/js/jquery.stellar.min.js') }}"></script>
+<!-- WOW JS -->
+<script src="{{ asset('Front/js/wow.min.js') }}"></script>
+<!-- Nivo slider js -->
+<script src="{{ asset('Front/vendor/slider/js/jquery.nivo.slider.js') }}" type="text/javascript"></script>
+<script src="{{ asset('Front/vendor/slider/home.js') }}" type="text/javascript"></script>
+<!-- Owl Cauosel JS -->
+<script src="{{ asset('Front/vendor/OwlCarousel/owl.carousel.min.js') }}" type="text/javascript"></script>
+<!-- Silk Cauosel JS -->
+<script src="{{ asset('Front/vendor/slick/slick.min.js') }}" type="text/javascript"></script>
+<!-- Meanmenu Js -->
+<script src="{{ asset('Front/js/jquery.meanmenu.min.js') }}" type="text/javascript"></script>
+<!-- Srollup js -->
+<script src="{{ asset('Front/js/jquery.scrollUp.min.js') }}" type="text/javascript"></script>
+<!-- jquery.counterup js -->
+<script src="{{ asset('Front/js/jquery.counterup.min.js') }}"></script>
+<script src="{{ asset('Front/js/waypoints.min.js') }}"></script>
+<!-- Countdown js -->
+<script src="{{ asset('Front/js/jquery.countdown.min.js') }}" type="text/javascript"></script>
+<!-- Isotope js -->
+<script src="{{ asset('Front/js/isotope.pkgd.min.js') }}" type="text/javascript"></script>
+<!-- Magic Popup js -->
+<script src="{{ asset('Front/js/jquery.magnific-popup.min.js') }}" type="text/javascript"></script>
+<!-- Scripts -->
+<script src="{{ asset('Front/js/jquery.pagepiling.js') }}"></script>
+<!-- Plugins js -->
+<script src="{{ asset('Front/js/plugins.js') }}" type="text/javascript"></script>
+<!-- Custom Js -->
+<script src="{{ asset('Front/js/main.js') }}"></script>
+<!-- Cookie jQuery -->
+<script src="{{ asset('Front/switcher/js/js.cookie.js') }}" type="text/javascript"></script>
+<!-- All Scripts & Plugins -->
+<script src="{{ asset('Front/switcher/js/dmss.js') }}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+</body>
+
+
+<!-- Mirrored from abctechweb.net/envato/templates/thegym/colortheme/amaranth/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 31 Aug 2022 00:47:41 GMT -->
+</html>

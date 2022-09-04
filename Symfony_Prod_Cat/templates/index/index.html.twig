@@ -1,0 +1,36 @@
+{% extends 'base-front.html.twig' %}
+
+{% block title %}Produits{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h2 class="section-title">VISIT OUR<span> STORE</span></h2>
+        <div class="section-title-bar"><i class="flaticon-dumbbell"></i></div>
+    </div>
+    <div class="container">
+        <div class="our-store-wrapper thegym-carousel nav-control-middle2" data-loop="true" data-items="4" data-margin="15" data-autoplay="false" data-autoplay-timeout="10000" data-smart-speed="2000" data-dots="false" data-nav="true" data-nav-speed="false" data-r-x-small="1" data-r-x-small-nav="true" data-r-x-small-dots="false" data-r-x-medium="2" data-r-x-medium-nav="true" data-r-x-medium-dots="false" data-r-small="2" data-r-small-nav="true" data-r-small-dots="false" data-r-medium="3" data-r-medium-nav="true" data-r-medium-dots="false" data-r-large="4" data-r-large-nav="true" data-r-large-dots="false">
+            {% for produit in produits %}
+            <div class="product-box-layout1">
+                <div class="product-img accent-color">
+                    <a href="/produits/produit/{{ produit.id }}"><img src="{{ asset('uploads/images/') }}{{ produit.image }}" alt="product"></a>
+                </div>
+                <div class="product-content-wrapper">
+                    <div class="product-content">
+                        <ul class="product-cart-view">
+                            <li><a href="#"><i class="fa fa-expand" aria-hidden="true"></i></a></li>
+                            <li><a href="#">add to cart</a></li>
+                            <li><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <h3><a href="#">{{ produit.nom }}</a></h3>
+                        <ul class="product-rating">
+                            {{ produit.rate |rating }}
+                        </ul>
+                        <div class="product-price">{{ produit.prix }} DT</div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

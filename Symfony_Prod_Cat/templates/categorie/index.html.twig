@@ -1,0 +1,104 @@
+{% extends 'base-back.html.twig' %}
+
+{% block title %}Categorie{% endblock %}
+
+{% block body %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Categories', '%'],
+
+                {% for categorie in categories %}
+                {% set test = 0 %}
+
+                {% for produit in produits %}
+                    {% if(produit.categorie.nom == categorie.nom) %}
+                         {% set test = test+1 %}
+                    {% endif %}
+                {% endfor %}
+
+
+                ['{{ categorie.nom }}', {{ test }} ],
+
+                {% endfor %}
+
+            ]);
+
+            var options = {
+                title: 'Categories des produits'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <h4 class="page-title">Data Tables</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title mt-0 mb-1">Categorie Table</h4>
+                    <a href="{{ path('app_categorie_new') }}" class="btn btn-info">Creer Categorie</a>
+                    <a href="/Categorie/pdf" class="btn btn-info">PDF</a>
+                    <br>
+                    {% for message in app.flashes('info')  %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('info-edit')  %}
+                        <div class="alert alert-warning">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    {% for message in app.flashes('info-delete')  %}
+                        <div class="alert alert-danger">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                    <br>
+                    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for categorie in categories %}
+                        <tr>
+                            <td>{{ categorie.id }}</td>
+                            <td>{{ categorie.nom }}</td>
+                            <td>
+                                <a href="/Categorie/edit/{{ categorie.id }}" class="btn btn-warning">Edit</a>
+                                <a href="/Categorie/delete/{{ categorie.id }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr de supprimer ?');">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div><!-- end col-->
+    </div>
+    <!-- end row-->
+{% endblock %}

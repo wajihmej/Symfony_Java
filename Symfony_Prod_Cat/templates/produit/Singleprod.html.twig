@@ -1,0 +1,57 @@
+{% extends 'base-front.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block body %}
+    <!-- Inner Page Banner Area Start Here -->
+    <div class="inner-page-banner-area" style="background-image: url('{{ asset('Front/img/product/banner2.jpg') }}');">
+        <div class="container">
+            <div class="pagination-area">
+                <h2 class="inner-section-title-textprimary">single<span> product</span></h2>
+                <ul>
+                    <li><a href="#">Home</a> -</li>
+                    <li><a href="#">Pages</a> -</li>
+                    <li>Produit</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Inner Page Banner Area End Here -->
+    <!-- Product Details Area Start Here -->
+    <div class="section-space-top body-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div class="inner-product-details-left mb-40">
+                        <div class="tab-content accent-color">
+                            <div class="tab-pane fade active in" >
+                                <a href="#"><img src="{{ asset('uploads/images/') }}{{ produit.image }}" class="img-responsive" alt="single-product"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                    <div class="inner-product-details-right mb-40">
+                        <h3>{{ produit.nom }}</h3>
+                        <p class="price"></span>{{ produit.prix }} DT</p>
+                        <ul>
+                            {{ produit.rate |rating }}
+                        </ul>
+                        <div class="product-details-content">
+                            <p><span>Categorie:</span> {{ produit.categorie.nom }}</p>
+                        </div>
+
+                        {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+                        {{ form_widget(form) }}
+                        <button type="submit" class="btn-success">Donner Avis </button>
+                        {{ form_end(form) }}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Product Details Area End Here -->
+
+{% endblock %}

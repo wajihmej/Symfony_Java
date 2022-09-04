@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUIController.MenuController">
+   <left>
+      <VBox prefHeight="600.0" prefWidth="140.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#InterCategorie" prefHeight="101.0" prefWidth="142.0" text="Gerer Categories" />
+            <Button mnemonicParsing="false" onAction="#InterProduit" prefHeight="94.0" prefWidth="140.0" text="Gerer Produit" />
+            <Button mnemonicParsing="false" onAction="#InterAvisProduit" prefHeight="94.0" prefWidth="140.0" text="Avis Produit" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="AP" prefHeight="639.0" prefWidth="1037.0" style="-fx-background-color: #14242B;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

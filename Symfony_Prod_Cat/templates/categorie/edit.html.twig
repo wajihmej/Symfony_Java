@@ -1,0 +1,45 @@
+{% extends 'base-back.html.twig' %}
+
+{% block title %}Modifier Categorie{% endblock %}
+
+{% block body %}
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <h4 class="page-title">Modifier Categorie</h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title mt-0">Categorie Form</h4>
+
+                    {{ form_start(form,{'attr':{'novalidate':'novalidate'}}) }}
+                    <div class="row">
+                        <div class="col">
+                            <div class="mb-3 row">
+                                {{ form_label(form.nom, 'Nom', { 'attr': {'class': 'col-lg-2 col-form-label'} }) }}
+                                <div class="col-lg-10">
+                                    {{ form_widget(form.nom, { 'attr': {'class': 'form-control'} }) }}
+                                </div>
+                                <div class="form-error">
+                                    {{ form_errors(form.nom) }}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-success">Modifier </button>
+                    {{ form_end(form) }}
+
+                </div> <!-- end card-body -->
+            </div> <!-- end card-->
+        </div><!-- end col -->
+    </div>
+    <!-- end row -->
+{% endblock %}

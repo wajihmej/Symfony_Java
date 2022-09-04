@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="746.0" prefWidth="1096.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.GUIController.ProduitInterfaceController">
+   <children>
+      <Label layoutX="181.0" layoutY="71.0" text="Nom :" />
+      <Label layoutX="178.0" layoutY="102.0" text="Prix :" />
+      <Label layoutX="179.0" layoutY="135.0" text="Image :" />
+      <TextField fx:id="nomtxt" layoutX="295.0" layoutY="67.0" promptText="Nom" />
+      <TextField fx:id="prixtxt" layoutX="296.0" layoutY="98.0" promptText="Prix" />
+      <TextField fx:id="affiche" layoutX="296.0" layoutY="129.0" promptText="Image" />
+      <Button fx:id="uploadbutton" layoutX="413.0" layoutY="129.0" mnemonicParsing="false" onAction="#Uploadfile" text="Upload" />
+      <Button layoutX="223.0" layoutY="202.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Label layoutX="178.0" layoutY="167.0" text="Categorie :" />
+      <ComboBox fx:id="ComboCategorie" layoutX="296.0" layoutY="160.0" prefWidth="150.0" />
+      <TableView fx:id="tableProduit" layoutX="178.0" layoutY="295.0" onMouseClicked="#LoadModif" prefHeight="300.0" prefWidth="690.0">
+        <columns>
+          <TableColumn fx:id="idt" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nomt" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="prixt" prefWidth="128.0" text="Prix" />
+            <TableColumn fx:id="imaget" prefWidth="126.0" text="Image" />
+            <TableColumn fx:id="categoriet" prefWidth="182.0" text="Categorie" />
+            <TableColumn fx:id="ratingt" prefWidth="103.0" text="Rating" />
+        </columns>
+      </TableView>
+      <Button layoutX="699.0" layoutY="260.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+      <Button layoutX="308.0" layoutY="202.0" mnemonicParsing="false" onAction="#Modifier" text="Modifier" />
+      <Label layoutX="178.0" layoutY="264.0" text="Recherche :" />
+      <TextField fx:id="recherche" layoutX="263.0" layoutY="259.0" promptText="Recherche" />
+      <Label fx:id="idlabel" layoutX="58.0" layoutY="102.0" prefHeight="54.0" prefWidth="72.0" />
+      <Label fx:id="filepath" layoutX="502.0" layoutY="144.0" visible="false" />
+   </children>
+</AnchorPane>
